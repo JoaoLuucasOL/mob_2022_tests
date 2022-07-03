@@ -15,3 +15,5 @@ web-build/
 
 yarn-lock
 yarn-error.lock
+yarn.lock
+yarn 
