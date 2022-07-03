@@ -1,6 +1,6 @@
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import { ChatScreen, PerfilScreen, MapScreen } from "../screens";
+import { ChatScreen, PerfilScreen, MapScreen, SairScreen } from "../screens";
 import colors from "../styles/colors";
 import { Ionicons } from "@expo/vector-icons";
 import { Text, StyleSheet } from "react-native";
@@ -47,6 +47,16 @@ export default function DrawerNavigation() {
           ),
         }}
       />
+      <Drawer.Screen
+        name="Sair"
+        component={SairScreen}
+        options={{
+          drawerLabel: "Sair",
+          drawerIcon: () => (
+            <Ionicons name="exit" size={24} color={colors.white} />
+          ),
+        }}
+      />
     </Drawer.Navigator>
   );
 }
@@ -54,8 +64,8 @@ export default function DrawerNavigation() {
 
 const styles = StyleSheet.create({
   title: {
-  color: colors.white,
-  fontWeight: "bold",
-  fontSize: 18,
+    color: colors.white,
+    fontWeight: "bold",
+    fontSize: 18,
   },
- });
+});
