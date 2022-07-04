@@ -28,9 +28,9 @@ const AuthProvider: React.FC = ({ children }) => {
         await AsyncStorage.setItem("user", JSON.stringify(user));
     }, []);
 
-    const register = useCallback(async ({ first_name, email, password }) => {
+    const register = useCallback(async ({ name, email, password }) => {
         const response = await apiUser.register({
-            first_name,
+            name,
             email,
             password,
         });
