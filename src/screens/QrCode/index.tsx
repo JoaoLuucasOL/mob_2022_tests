@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ImageBackground, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import { BarCodeScanner, BarCodeScannerResult } from "expo-barcode-scanner";
 
 import styles from "./styles";
@@ -12,27 +12,24 @@ const QrCode = () => {
     useEffect(() => {
         (async () => {
             const { status } = await BarCodeScanner.requestPermissionsAsync();
-            setHasPermission(status == "granted");
+            setHasPermission(status === "granted");
         })();
     }, []);
 
-    const handleBarCodeScanned = ({ type, data }: BarCodeScannerResult) => {
+    const handleBarCodeScanned = ({ type, data} : BarCodeScannerResult) => {
         setScanned(true);
-        alert(data);
+        alert(`Tipo: ${type} Data: ${data}`);
     };
 
-    if (hasPermission == null) {
+    if (hasPermission === null) {
         return <Text>Requesting for camera permission</Text>;
     }
-    if (hasPermission == false) {
+    if (hasPermission === false){
         return <Text>No acess to camera</Text>;
     }
 
     return (
-        <ImageBackground
-            source={require("../../assets/fundo.png")}
-            style={styles.scanner}
-        >
+        <View style={styles.container}>
             <View style={styles.centraliza}>
                 <BarCodeScanner
                     onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
@@ -41,12 +38,12 @@ const QrCode = () => {
             </View>
             {scanned && (
                 <ButtonComp
-                    type="green"
+                    type="third"
                     title="Pressione para escanear novamente"
-                    onPress={() => setScanned(false)}
+                    onPress={ () => setScanned(false)}
                 />
             )}
-        </ImageBackground>
+        </View>
     );
 };
 

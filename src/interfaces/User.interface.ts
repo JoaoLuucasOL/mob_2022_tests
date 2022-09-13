@@ -20,6 +20,7 @@ export interface IUser {
         }
     }
 }
+
 export interface IAuthState {
     access_token: string,
     user: {
@@ -40,4 +41,4 @@ export interface IAuthContextData {
         email: string,
         profile_photo_url: string
     }
-}  
+}

@@ -5,27 +5,46 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: 10,
-    alignItems: "center",
+    alignItems: 'center',
   },
   rowSearch: {
-    flexDirection: "row",
+    flexDirection: 'row',
     backgroundColor: colors.primaryLight,
     borderRadius: 10,
-    margin: 10,
-    alignItems: "center",
-    width: "100%",
-    height: 45
+    alignItems: 'center',
+    width: 300,
+    height: 45,
+    marginBottom: 20
+  },
+  input: {
+    width: "80%"
   },
   icon: {
     fontSize: 24,
+    padding: 5,
+  },
+  img: {
+    width: 120,
+    height: 120,
     padding: 5
+    },
+  button:{
+    position:'absolute',
+    bottom:10,
+    right:0,
+    backgroundColor:colors.secondaryLight,
+    width:50,
+    height:50,
+    borderRadius:50,
+    display:"flex",
+    justifyContent:"center",
+    alignItems:"center"
   },
-  input: {
-    width: "50%"
-  },
-  list: {
-    marginBottom: 10
+  buttonText:{
+    color:colors.white,
+    fontSize: 28,
+    fontWeight:"bold"
   }
-});
+})
 
-export default styles
+export default styles;

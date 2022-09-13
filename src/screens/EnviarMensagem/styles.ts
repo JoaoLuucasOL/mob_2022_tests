@@ -2,52 +2,47 @@ import { StyleSheet } from 'react-native'
 import colors from '../../styles/colors'
 
 const styles = StyleSheet.create({
-    container: {
+    container:{
         flex: 1,
     },
-    startOver: {
+    containerForm: {
         flex: 1,
-        backgroundColor: colors.white,
-        justifyContent: "center",
-        alignItems: "center",
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: "100%",
     },
-    buttonstartOver: {
-        width: 130,
-        borderRadius: 4,
-        backgroundColor: colors.secondary,
-        justifyContent: "center",
-        height: 40,
+    input: {
+        fontSize: 18,
+        padding: 10,
+        width: "80%",
+        textAlignVertical: 'top',
+        borderWidth: 1,
+        borderColor: colors.black,
+        borderRadius: 5,
+        margin: 10,
     },
-    textStartOver: {
-        textAlign: "center",
-        color: colors.white,
-        fontWeight: "bold",
+    label: {
+        height: 2
     },
-    collumnPreviewVisible: {
-        flex: 1,
-        flexDirection: "column",
-        padding: 15,
-        justifyContent: "flex-end",
+    select: {
+        width: "80%",
     },
-    rowPreviewVisible: {
+    selectTopico: {
+        borderWidth: 1,
+        borderColor: colors.black,
+        borderRadius: 5,
+        padding: 10,
+        height: 60
+    },
+    imagem: {
         flexDirection: "row",
-        justifyContent: "space-between",
     },
-    buttonPreviewVisible: {
-        width: 130,
-        height: 40,
-        alignItems: "center",
-        borderRadius: 4,
+    img: {
+        width: 100,
+        height: 100,
     },
-    textPreviewVisible: {
-        color: colors.white,
-        fontSize: 20,
-    },
-    buttonSavePhoto: {
-        width: 130,
-        height: 40,
-        alignItems: "center",
-        borderRadius: 4,
+    buttonImage: {
+        margin: 10,
     },
     buttonTop: {
         flex: 1,

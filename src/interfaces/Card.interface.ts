@@ -1,6 +1,7 @@
 export interface CardSocialProps {
   children: JSX.Element
 }
+
 export interface CardProps {
   data: {
     id: number,

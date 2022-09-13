@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native"
-import colors from "../../styles/colors"
+import { StyleSheet } from 'react-native';
+import colors from '../../styles/colors';
 
 const styles = StyleSheet.create({
   container: {
@@ -19,14 +19,12 @@ const styles = StyleSheet.create({
     fontSize: 24,
     padding: 5
   },
-  link: {
-    fontSize: 20,
+  input: {
+    fontSize: 20
   },
-  img: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
-  },
+  link:{
+    fontSize:20
+  }
 })
 
-export default styles
+export default styles;

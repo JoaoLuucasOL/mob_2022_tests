@@ -4,11 +4,9 @@ import { Alert, View } from "react-native";
 import { LoadingComp } from "../../components";
 import { useAuth } from "../../hook/auth";
 import { IUser } from "../../interfaces/User.interface";
-
 export default function Sair() {
     const { signOut } = useAuth();
     const [isLoading, setIsLoading] = useState(true);
-
     useEffect(() => {
         async function logout() {
             try {
@@ -23,10 +21,9 @@ export default function Sair() {
                     }
                 }
                 Alert.alert(`${data.message} ${message}`);
-                }
+            }
         }
         logout();
     }, []);
-        
     return <>{isLoading ? <LoadingComp /> : <View />}</>;
 }
